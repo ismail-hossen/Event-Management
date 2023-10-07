@@ -1,0 +1,152 @@
+[
+  {
+    "EventID": "conf2023",
+    "EventType": "Conference",
+    "EventName": "TechConnect 2023",
+    "Description": "TechConnect 2023 is an annual technology conference that brings together industry leaders and innovators to discuss the latest trends and advancements.",
+    "StartDate": "2023-11-15",
+    "EndDate": "2023-11-18",
+    "price": "1200",
+    "Location": "San Francisco Convention Center",
+    "Attendees": 1500,
+    "Sponsors": [
+      "TechCorp",
+      "InnovateTech Inc."
+    ],
+    "Speakers": [
+      "Keynote Speaker: Jane Smith",
+      "Panelist: John Doe"
+    ],
+    "Workshops": true,
+    "NetworkingSessions": true,
+    "ExhibitionArea": true,
+    "BreakoutSessions": true,
+    "Featured": true,
+    "BrandImage": "https://i.ibb.co/sWvvcBJ/conference.jpg"
+  },
+  {
+    "EventID": "sem2023",
+    "EventType": "Seminar",
+    "EventName": "Leadership Seminar 2023",
+    "Description": "A one-day seminar focusing on leadership development and effective management strategies.",
+    "StartDate": "2023-09-30",
+    "EndDate": "2023-09-30",
+    "price": "1000",
+    "Location": "Grand Hotel Conference Center",
+    "Attendees": 80,
+    "Speakers": [
+      "Expert Speaker: Sarah Johnson",
+      "Trainer: Mark Anderson"
+    ],
+    "Workshops": true,
+    "QASessions": true,
+    "Featured": true,
+    "BrandImage": "https://i.ibb.co/h9wnwn5/seminar.jpg"
+  },
+  {
+    "EventID": "expo2023",
+    "EventType": "Trade Show and Expo",
+    "EventName": "Auto Expo 2023",
+    "Description": "A premier automotive industry expo showcasing the latest car models, technology, and innovations.",
+    "StartDate": "2023-06-10",
+    "EndDate": "2023-06-14",
+    "price": "1440",
+    "Location": "National Exhibition Center",
+    "Attendees": 20000,
+    "Exhibitors": [
+      "AutoTech Inc.",
+      "Global Motors"
+    ],
+    "KeynoteSpeakers": [
+      "CEO of AutoTech Inc.",
+      "Renowned Auto Designer"
+    ],
+    "ProductLaunches": true,
+    "InteractiveDisplays": true,
+    "NetworkingLounges": true,
+    "Featured": true,
+    "BrandImage": "https://i.ibb.co/G2VKsFm/trade-show.jpg"
+  },
+  {
+    "EventID": "team2023",
+    "EventType": "Team Building Workshop",
+    "EventName": "Team Builders Retreat 2023",
+    "Description": "A two-day team building retreat in the scenic countryside, focused on improving teamwork and collaboration.",
+    "StartDate": "2023-07-20",
+    "EndDate": "2023-07-21",
+    "price": "1250",
+    "Location": "Green Valley Retreat Center",
+    "Attendees": 35,
+    "Facilitators": [
+      "Team Building Expert: Emily Adams",
+      "Adventure Guide: Mike Roberts"
+    ],
+    "TeamChallenges": true,
+    "OutdoorActivities": true,
+    "Team-buildingGames": true,
+    "Featured": true,
+    "BrandImage": "https://i.ibb.co/HhB80hY/Team-Building.jpg"
+  },
+  {
+    "EventID": "launch2023",
+    "EventType": "Product Launch",
+    "EventName": "Smartphone X Launch",
+    "Description": "The unveiling of the latest flagship smartphone from TechGiant Inc., featuring cutting-edge technology.",
+    "StartDate": "2023-04-05",
+    "EndDate": "2023-04-05",
+    "price": "1100",
+    "Location": "TechGiant Showroom",
+    "Attendees": 300,
+    "ProductDemos": true,
+    "MediaCoverage": true,
+    "InteractiveDisplays": true,
+    "LiveStreaming": true,
+    "Featured": true,
+    "BrandImage": "https://i.ibb.co/sWvvcBJ/conference.jpg"
+  },
+  {
+    "EventID": "meeting2023",
+    "EventType": "Corporate Meeting",
+    "EventName": "Quarterly Board Meeting Q3 2023",
+    "Description": "A quarterly board meeting to review financial, discuss strategic plans, and make key decisions.",
+    "StartDate": "2023-08-18",
+    "EndDate": "2023-08-20",
+    "price": "1200",
+    "Location": "Corporate Headquarters",
+    "Attendees": 15,
+    "Agenda": [
+      "Financial Report Presentation",
+      "Strategy Discussion"
+    ],
+    "Presenters": [
+      "CEO: John Smith",
+      "CFO: Jane Doe"
+    ],
+    "CollaborationTools": true,
+    "VideoConferencing": true,
+    "MeetingMinutes": true,
+    "Featured": true,
+    "BrandImage": "https://i.ibb.co/sWvvcBJ/conference.jpg"
+  },
+  {
+    "EventID": "awards2023",
+    "EventType": "Award Ceremony",
+    "EventName": "Annual Excellence Awards Gala 2023",
+    "Description": "A prestigious awards ceremony recognizing outstanding employees and achievements within the organization.",
+    "StartDate": "2023-12-10",
+    "EndDate": "2023-12-10",
+    "price": "2200",
+    "Location": "Grand Ballroom, City Center Hotel",
+    "Attendees": 150,
+    "AwardsCategories": [
+      "Employee of the Year",
+      "Innovation Award",
+      "Leadership Excellence"
+    ],
+    "HostorMC": "Celebrity Host: Jessica Turner",
+    "RedCarpet": true,
+    "EntertainmentActs": true,
+    "CateringandDinner": true,
+    "BrandImage": "https://i.ibb.co/sWvvcBJ/conference.jpg"
+  }
+]
