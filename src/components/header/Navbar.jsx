@@ -1,6 +1,20 @@
+import { Link, useNavigate } from "react-router-dom";
 import NavItem from "./NavItem";
+import { useContext } from "react";
+import { ThemeContext } from "../../auth_context/AuthContext";
 
 const Navbar = () => {
+  const { user, logout } = useContext(ThemeContext);
+  const navigate = useNavigate();
+  const handleLogOut = () => {
+    logout()
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log("from navbar", error);
+      });
+  };
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -29,7 +43,9 @@ const Navbar = () => {
             <NavItem route="/all-events" name="All Events" />
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">EM4U</a>
+        <Link to="/" className="btn btn-ghost normal-case text-xl">
+          EM4U
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -38,8 +54,15 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <ul>
-          <NavItem route="/login" name="Login" />
+        <ul className="menu menu-horizontal px-1">
+          {user ? (
+            <button onClick={handleLogOut}> Logout </button>
+          ) : (
+            <>
+              <NavItem route="/login" name="Login" />
+              <NavItem route="/register" name="SignUp" />
+            </>
+          )}
         </ul>
       </div>
     </div>

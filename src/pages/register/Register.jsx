@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../../auth_context/AuthContext";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
-const Login = () => {
-  const { login } = useContext(ThemeContext);
+const Register = () => {
+  const { createUser } = useContext(ThemeContext);
 
   const handleForm = (e) => {
     e.preventDefault();
-    login(e.target.email.value, e.target.password.value)
+    createUser(e.target.email.value, e.target.password.value)
       .then((userCredential) => {
         // Signed up
         toast.success("Successfully created account.", {
@@ -30,7 +30,7 @@ const Login = () => {
     <div className="hero min-h-screen">
       <div className="hero-content flex-col">
         <div className="text-center">
-          <h1 className="text-3xl font-normal">Login now!</h1>
+          <h1 className="text-3xl font-normal">Sign Up!</h1>
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm bg-base-200 border rounded-md">
           <form onSubmit={handleForm} className="card-body">
@@ -64,21 +64,22 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-primary">Create account</button>
             </div>
           </form>
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm bg-white border rounded-md items-center">
           <p>
-            New to EM4U?{" "}
-            <Link to="/register" className="text-primary hover:underline">
-              Create an account
+            Already have an account?{" "}
+            <Link to="/login" className="text-primary hover:underline">
+              Login
             </Link>
           </p>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };
 
-export default Login;
+export default Register;
