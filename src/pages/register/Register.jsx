@@ -1,29 +1,23 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../../auth_context/AuthContext";
 import toast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
   const { createUser } = useContext(ThemeContext);
+  const [error, setError] = useState(null);
 
   const handleForm = (e) => {
     e.preventDefault();
     createUser(e.target.email.value, e.target.password.value)
-      .then((userCredential) => {
-        // Signed up
-        toast.success("Successfully created account.", {
-          duration: 3000,
-          position: "bottom-right",
-        });
-        const user = userCredential.user;
-        console.log(user);
-        // ...
+      .then(() => {
+        toast.success("User created successfully");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
-        // ..
+        setError(errorCode);
       });
   };
   return (
@@ -65,6 +59,7 @@ const Register = () => {
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Create account</button>
+              <p className="text-sm text-red-400">{error}</p>
             </div>
           </form>
         </div>

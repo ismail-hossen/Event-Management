@@ -6,6 +6,8 @@ import AllEvents from "../pages/all_events/AllEvents";
 import Details from "../pages/details/Details";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
+import Private from "./PrivateRoute";
+import Public from "./PublicRoute";
 
 export const router = createBrowserRouter([
   {
@@ -15,9 +17,30 @@ export const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/all-events", element: <AllEvents /> },
-      { path: "/details/:id", element: <Details /> },
-      { path: "/login", element: <Login /> },
-      { path: "/register", element: <Register /> },
+      {
+        path: "/details/:id",
+        element: (
+          <Private>
+            <Details />
+          </Private>
+        ),
+      },
+      {
+        path: "/login",
+        element: (
+          <Public>
+            <Login />
+          </Public>
+        ),
+      },
+      {
+        path: "/register",
+        element: (
+          <Public>
+            <Register />
+          </Public>
+        ),
+      },
     ],
   },
 ]);

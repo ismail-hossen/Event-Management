@@ -1,29 +1,32 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../../auth_context/AuthContext";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
+  const [error, setError] = useState(null);
   const { login } = useContext(ThemeContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleForm = (e) => {
     e.preventDefault();
     login(e.target.email.value, e.target.password.value)
       .then((userCredential) => {
-        // Signed up
-        toast.success("Successfully created account.", {
+        toast.success("Login success!", {
           duration: 3000,
           position: "bottom-right",
         });
         const user = userCredential.user;
         console.log(user);
-        // ...
+
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
-        // ..
+        setError(errorCode);
       });
   };
   return (
@@ -65,6 +68,7 @@ const Login = () => {
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
+              <p className="text-sm text-red-400">{error}</p>
             </div>
           </form>
         </div>
@@ -77,6 +81,7 @@ const Login = () => {
           </p>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };

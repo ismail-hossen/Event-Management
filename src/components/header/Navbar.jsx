@@ -1,20 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavItem from "./NavItem";
 import { useContext } from "react";
 import { ThemeContext } from "../../auth_context/AuthContext";
 
 const Navbar = () => {
-  const { user, logout } = useContext(ThemeContext);
-  const navigate = useNavigate();
-  const handleLogOut = () => {
-    logout()
-      .then(() => {
-        navigate("/");
-      })
-      .catch((error) => {
-        console.log("from navbar", error);
-      });
-  };
+  const { user, logout, loading } = useContext(ThemeContext);
+  const handleLogOut = () => logout();
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -55,8 +47,14 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <ul className="menu menu-horizontal px-1">
-          {user ? (
-            <button onClick={handleLogOut}> Logout </button>
+          {loading ? (
+            <span className="loading loading-infinity loading-lg"></span>
+          ) : user ? (
+            <>
+              <li>{user?.displayName}</li>
+              <li> {user?.photoURL} </li>
+              <li onClick={handleLogOut}> Logout </li>
+            </>
           ) : (
             <>
               <NavItem route="/login" name="Login" />
