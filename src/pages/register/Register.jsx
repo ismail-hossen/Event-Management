@@ -9,17 +9,26 @@ const Register = () => {
 
   const handleForm = (e) => {
     e.preventDefault();
-    createUser(e.target.email.value, e.target.password.value)
-      .then(() => {
-        toast.success("User created successfully");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        setError(errorCode);
-      });
+    const expression =
+      /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+])[A-Za-z0-9!@#$%^&*()_+]{6,}$/;
+    if (expression.test(e.target.password.value)) {
+      createUser(e.target.email.value, e.target.password.value)
+        .then(() => {
+          toast.success("User created successfully");
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+          setError(errorCode);
+        });
+    } else {
+      setError(
+        "Password must be minimum six characters, at least one capital letter and at least one special character."
+      );
+    }
   };
+
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col">

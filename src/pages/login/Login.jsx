@@ -5,30 +5,37 @@ import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
   const [error, setError] = useState(null);
-  const { login } = useContext(ThemeContext);
+  const { login, signInWithGoogle } = useContext(ThemeContext);
   const location = useLocation();
   const navigate = useNavigate();
 
   const handleForm = (e) => {
     e.preventDefault();
     login(e.target.email.value, e.target.password.value)
-      .then((userCredential) => {
+      .then(() => {
         toast.success("Login success!", {
           duration: 3000,
           position: "bottom-right",
         });
-        const user = userCredential.user;
-        console.log(user);
-
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        setError(errorCode);
+        setError(errorMessage);
       });
   };
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then(() => {
+        toast.success("Login success!");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setError(errorMessage);
+      });
+  };
+
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col">
@@ -72,7 +79,10 @@ const Login = () => {
             </div>
           </form>
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm bg-white border rounded-md items-center">
+        <div className="card flex-shrink-0 w-full max-w-sm bg-white border rounded-md items-center py-10 gap-4">
+          <button onClick={handleGoogleLogin} className="btn btn-outline">
+            Login with Google
+          </button>
           <p>
             New to EM4U?{" "}
             <Link to="/register" className="text-primary hover:underline">

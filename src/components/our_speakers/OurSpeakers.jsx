@@ -9,7 +9,7 @@ const OurSpeakers = () => {
       .then((data) => setSpeakers(data));
   }, []);
   return (
-    <div className="py-20">
+    <div className="py-24">
       <div className="flex flex-col items-center gap-y-2 mb-16">
         <h2 className="text-black font-bold text-4xl">Our Speakers</h2>
         <p className="border-b-2">

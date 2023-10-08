@@ -8,7 +8,7 @@ const Navbar = () => {
   const handleLogOut = () => logout();
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-200">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,14 +46,22 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        {user?.photoURL && (
+          <div className="avatar flex items-center justify-center gap-2 mr-4">
+            <div className="w-9 rounded-full">
+              <img src={user.photoURL} alt="" />
+            </div>
+            <p className="font-normal">{user.displayName}</p>
+          </div>
+        )}
         <ul className="menu menu-horizontal px-1">
           {loading ? (
             <span className="loading loading-infinity loading-lg"></span>
           ) : user ? (
             <>
-              <li>{user?.displayName}</li>
-              <li> {user?.photoURL} </li>
-              <li onClick={handleLogOut}> Logout </li>
+              <li className="font-semibold" onClick={handleLogOut}>
+                Logout
+              </li>
             </>
           ) : (
             <>
