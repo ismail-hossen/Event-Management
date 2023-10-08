@@ -26,19 +26,6 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <NavItem route="/" name="Home" />
-
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-
             <NavItem route="/all-events" name="All Events" />
           </ul>
         </div>
@@ -47,26 +34,13 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <NavItem route="/" name="Home" />
-
-          <li tabIndex={0}>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-
           <NavItem route="/all-events" name="All Events" />
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Login</a>
+        <ul>
+          <NavItem route="/login" name="Login" />
+        </ul>
       </div>
     </div>
   );

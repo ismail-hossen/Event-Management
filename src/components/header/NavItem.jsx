@@ -6,6 +6,7 @@ const NavItem = ({ route, name }) => {
     <li>
       <NavLink
         to={route}
+        className="font-semibold"
         style={({ isActive, isPending }) => {
           return {
             fontWeight: isActive ? "bold" : "",

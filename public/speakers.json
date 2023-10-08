@@ -1,0 +1,110 @@
+[
+  {
+    "SpeakerID": "speaker1",
+    "SpeakerName": "Jane Smith",
+    "Title": "CEO, TechCorp",
+    "Bio": "Jane Smith is a visionary leader with over 20 years of experience in the technology industry. She has led TechCorp to new heights with her innovative strategies.",
+    "Contact": {
+      "Email": "jane.smith@techcorp.com",
+      "Phone": "+1 (555) 123-4567"
+    },
+    "Avatar": "https://i.ibb.co/sWvvcBJ/conference.jpg",
+    "Events": [
+      {
+        "EventID": "conf2023",
+        "EventName": "TechConnect 2023",
+        "EventType": "Conference"
+      }
+    ]
+  },
+  {
+    "SpeakerID": "speaker2",
+    "SpeakerName": "John Doe",
+    "Title": "Founder, InnovateTech Inc.",
+    "Bio": "John Doe is a tech entrepreneur and visionary known for founding InnovateTech Inc. He is passionate about disruptive technologies and innovation.",
+    "Contact": {
+      "Email": "john.doe@innovatetech.com",
+      "Phone": "+1 (555) 987-6543"
+    },
+    "Avatar": "https://i.ibb.co/sWvvcBJ/conference.jpg",
+    "Events": [
+      {
+        "EventID": "conf2023",
+        "EventName": "TechConnect 2023",
+        "EventType": "Conference"
+      }
+    ]
+  },
+  {
+    "SpeakerID": "speaker3",
+    "SpeakerName": "Sarah Johnson",
+    "Title": "Leadership Coach and Author",
+    "Bio": "Sarah Johnson is a renowned leadership coach and author. She has helped countless individuals and organizations achieve their leadership potential.",
+    "Contact": {
+      "Email": "sarah.johnson@leadershipcoach.com",
+      "Phone": "+1 (555) 789-0123"
+    },
+    "Avatar": "https://i.ibb.co/sWvvcBJ/conference.jpg",
+    "Events": [
+      {
+        "EventID": "sem2023",
+        "EventName": "Leadership Seminar 2023",
+        "EventType": "Seminar"
+      }
+    ]
+  },
+  {
+    "SpeakerID": "speaker4",
+    "SpeakerName": "Mark Anderson",
+    "Title": "Trainer and Management Consultant",
+    "Bio": "Mark Anderson is a seasoned trainer and management consultant with expertise in leadership development and effective management practices.",
+    "Contact": {
+      "Email": "mark.anderson@trainingpros.com",
+      "Phone": "+1 (555) 234-5678"
+    },
+    "Avatar": "https://i.ibb.co/sWvvcBJ/conference.jpg",
+    "Events": [
+      {
+        "EventID": "sem2023",
+        "EventName": "Leadership Seminar 2023",
+        "EventType": "Seminar"
+      }
+    ]
+  },
+  {
+    "SpeakerID": "speaker5",
+    "SpeakerName": "Renowned Auto Designer",
+    "Title": "Automotive Design Expert",
+    "Bio": "This renowned auto designer has shaped the automotive industry with groundbreaking designs for some of the world's most iconic vehicles.",
+    "Contact": {
+      "Email": "auto.designer@automotiveexpert.com",
+      "Phone": "+1 (555) 345-6789"
+    },
+    "Avatar": "https://i.ibb.co/sWvvcBJ/conference.jpg",
+    "Events": [
+      {
+        "EventID": "expo2023",
+        "EventName": "Auto Expo 2023",
+        "EventType": "Trade Show and Expo"
+      }
+    ]
+  },
+  {
+    "SpeakerID": "speaker6",
+    "SpeakerName": "David Adams",
+    "Title": "Entertainment Booking Expert",
+    "Bio": "David Adams has a deep knowledge of the entertainment industry and has booked top entertainers for corporate events, adding excitement and energy.",
+    "Contact": {
+      "Email": "david.adams@starentertainment.com",
+      "Phone": "+1 (555) 456-7890"
+    },
+    "Avatar": "https://i.ibb.co/sWvvcBJ/conference.jpg",
+    "Events": [
+      {
+        "EventID": "expo2023",
+        "EventName": "Auto Expo 2023",
+        "EventType": "Trade Show and Expo"
+      }
+    ]
+  }
+]
