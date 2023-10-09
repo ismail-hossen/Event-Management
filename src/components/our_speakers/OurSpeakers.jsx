@@ -4,7 +4,7 @@ import SpeakerCard from "./SpeakerCard";
 const OurSpeakers = () => {
   const [speaker, setSpeakers] = useState([]);
   useEffect(() => {
-    fetch("speakers.json")
+    fetch("/speakers.json")
       .then((res) => res.json())
       .then((data) => setSpeakers(data));
   }, []);
