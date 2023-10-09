@@ -18,9 +18,13 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B?
 
-<i>Write your explanation here</i>
+<i>In first line is only a declaration of variable with name of greeting. But in
+second line tried to reassign a variable name of greetign with empty object as a
+value. The greetign variable is not exit or don't declared, that's why when
+trying to see value of variable greetign in console the console got
+ReferenceError.</i>
 
 </p>
 </details>
@@ -43,9 +47,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C?
 
-<i>Write your explanation here</i>
+<i></i>
 
 </p>
 </details>
@@ -69,7 +73,7 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A?
 
 <i>Write your explanation here</i>
 
@@ -94,7 +98,7 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B?
 
 <i>Write your explanation here</i>
 
@@ -122,7 +126,7 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C?
 
 <i>Write your explanation here</i>
 
