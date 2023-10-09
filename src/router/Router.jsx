@@ -8,6 +8,7 @@ import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import Private from "./PrivateRoute";
 import Public from "./PublicRoute";
+import Blog from "../pages/blog/Blog";
 
 export const router = createBrowserRouter([
   {
@@ -16,7 +17,22 @@ export const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/all-events", element: <AllEvents /> },
+      {
+        path: "/all-events",
+        element: (
+          <Private>
+            <AllEvents />
+          </Private>
+        ),
+      },
+      {
+        path: "/blog",
+        element: (
+          <Private>
+            <Blog />
+          </Private>
+        ),
+      },
       {
         path: "/details/:id",
         element: (

@@ -29,29 +29,43 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-32 lg:w-52"
           >
             <NavItem route="/" name="Home" />
-            <NavItem route="/all-events" name="All Events" />
+            {user && (
+              <>
+                <NavItem route="/all-events" name="All Events" />
+                <NavItem route="/blog" name="Blog" />
+              </>
+            )}
+            <NavItem route="/contact" name="Contact" />
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
+        <Link to="/" className="btn btn-ghost normal-case text-lg lg:text-xl">
           EM4U
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <NavItem route="/" name="Home" />
-          <NavItem route="/all-events" name="All Events" />
+          {user && (
+            <>
+              <NavItem route="/all-events" name="All Events" />
+              <NavItem route="/blog" name="Blog" />
+            </>
+          )}
+          <NavItem route="/contact" name="Contact" />
         </ul>
       </div>
       <div className="navbar-end">
         {user?.photoURL && (
           <div className="avatar flex items-center justify-center gap-2 mr-4">
-            <div className="w-9 rounded-full">
+            <div className="w-6 lg:w-9 rounded-full">
               <img src={user.photoURL} alt="" />
             </div>
-            <p className="font-normal">{user.displayName}</p>
+            <p className="text-xs lg:font-normal lg:text-lg">
+              {user.displayName}
+            </p>
           </div>
         )}
         <ul className="menu menu-horizontal px-1">

@@ -1,24 +1,23 @@
 const Banner = () => {
   return (
     <>
-      <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage:
-            "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
-        }}
-      >
-        <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-            <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <button className="btn btn-primary">Get Started</button>
-          </div>
+      <div className="relative py-20 bg-gradient-to-r from-red-700 via-red-500 to-red-900 text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-hero-pattern"></div>
+
+        <div className="container mx-auto text-center relative z-10">
+          <h1 className="text-4xl font-semibold mb-4">
+            Experience Unforgettable Corporate Events
+          </h1>
+          <p className="text-lg mb-8">
+            Join us for expert-led conferences, workshops, and networking
+            opportunities.
+          </p>
+          <a
+            href="#"
+            className="btn bg-red-500 text-white outline-white hover:outline-red-400 hover:bg-red-400"
+          >
+            Register Now
+          </a>
         </div>
       </div>
     </>

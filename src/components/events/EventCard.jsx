@@ -12,20 +12,24 @@ const EventCard = ({ event }) => {
     EventID,
   } = event || {};
   return (
-    <div className="card card-side bg-base-100">
-      <figure className="w-3/12">
+    <div className="card card-side bg-base-100 flex-col lg:flex-row">
+      <figure className="w-full lg:w-3/12">
         <img
           className="w-full h-full rounded-lg"
           src={BrandImage}
           alt="Movie"
         />
       </figure>
-      <div className="card-body pt-0 w-9/12 gap-y-4">
-        <h3 className="text-3xl font-bold">{EventName}</h3>
-        <p className="font-semibold text-xl">
+      <div className="card-body p-0 lg:ps-5 w-full lg:w-9/12 gap-y-2 lg:gap-y-4">
+        <h3 className="text-2xl lg:text-3xl font-semibold lg:font-bold">
+          {EventName}
+        </h3>
+        <p className="font-medium lg:font-semibold lg:text-xl">
           {StartDate} on {Location}
         </p>
-        <p className="text-red-400 text-2xl font-bold">Tickets from ${price}</p>
+        <p className="text-red-400 text-xl lg:text-2xl font-semibold lg:font-bold">
+          Tickets from ${price}
+        </p>
         <p>{Description}</p>
         <p>
           <Link
